@@ -1,0 +1,11 @@
+set interfaces ge-0/0/2 description pyeztest
+set protocols bgp family inet unicast
+set protocols bgp family inet-vpn unicast
+set protocols bgp family inet6 unicast  
+set protocols bgp family inet6-vpn unicast
+set protocols bgp family l2vpn signaling
+set protocols bgp group ibgp-peers type internal
+set protocols bgp group ibgp-peers local-address 10.10.10.10
+set protocols bgp group ibgp-peers cluster 1.1.1.1
+set protocols bgp group ibgp-peers neighbor 20.20.20.20
+set system ntp boot-server 192.168.15.25
